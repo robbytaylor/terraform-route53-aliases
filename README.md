@@ -9,7 +9,8 @@ I use this in combination with https://github.com/robbytaylor/terraform-static-w
 ```
 
 module route53_aliases {
-  source        = "github.com/robbytaylor/terraform-route53-aliases"
+  source        = "robbytaylor/terraform-route53-aliases"
+  version       = "0.1.1"
   zone          = "example.com"
   records       = ["example.com", "www.example.com"]
   alias_name    = module.website.cloudfront_domain_name
